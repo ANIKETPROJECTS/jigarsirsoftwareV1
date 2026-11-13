@@ -1,7 +1,15 @@
-modules = ["nodejs-20", "web"]
+modules = ["web", "nodejs-22"]
 
 [nix]
 channel = "stable-25_05"
+packages = ["mariadb", "chromium"]
 
 [agent]
 expertMode = true
+
+[userenv]
+
+[userenv.shared]
+CHROME_PATH = "/run/current-system/sw/bin/chromium"
+PORT = "3001"
+VITE_API_BASE_URL = "/api"

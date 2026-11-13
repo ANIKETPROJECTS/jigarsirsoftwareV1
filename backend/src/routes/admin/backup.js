@@ -79,6 +79,7 @@ function runDump(dbName) {
       `--host=${process.env.DB_HOST || 'localhost'}`,
       `--port=${process.env.DB_PORT || 3306}`,
       `--user=${process.env.DB_USER}`,
+      ...(process.env.DB_SOCKET ? [`--socket=${process.env.DB_SOCKET}`, '--protocol=SOCKET'] : []),
       '--single-transaction',
       '--quick',
       '--hex-blob',
@@ -168,6 +169,7 @@ router.get('/test', requirePermission('ADMIN', 'CanView'), async (req, res) => {
       `--host=${process.env.DB_HOST || 'localhost'}`,
       `--port=${process.env.DB_PORT || 3306}`,
       `--user=${process.env.DB_USER}`,
+      ...(process.env.DB_SOCKET ? [`--socket=${process.env.DB_SOCKET}`, '--protocol=SOCKET'] : []),
       '--no-data',
       '--databases', process.env.ADMIN_DB_NAME || 'gms_admin',
     ];

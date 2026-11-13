@@ -11,6 +11,11 @@
 // If init fails (e.g. gms_admin is unreachable), the process exits with code 1
 // so that process managers (PM2, Docker) can restart it.
 require('dotenv').config();
+// Reuse Replit's existing signing secret when a dedicated JWT secret is absent.
+process.env.JWT_SECRET = process.env.JWT_SECRET || process.env.SESSION_SECRET;
+if (!process.env.JWT_SECRET) {
+  throw new Error('Set JWT_SECRET or SESSION_SECRET in Replit Secrets before starting.');
+}
 
 const adminDB           = require('./config/adminDatabase');
 const connectionManager = require('./config/connectionManager');

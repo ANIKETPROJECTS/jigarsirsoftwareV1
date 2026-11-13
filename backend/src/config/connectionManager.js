@@ -31,6 +31,7 @@ function makeSequelize(dbName) {
       host:    process.env.DB_HOST || 'localhost',
       port:    parseInt(process.env.DB_PORT) || 3306,
       dialect: 'mysql',
+      dialectOptions: process.env.DB_SOCKET ? { socketPath: process.env.DB_SOCKET } : {},
       logging: false,
       pool: {
         max:     10,

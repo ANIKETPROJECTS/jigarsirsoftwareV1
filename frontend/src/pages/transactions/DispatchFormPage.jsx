@@ -38,7 +38,7 @@ import PhotoLibraryIcon  from '@mui/icons-material/PhotoLibrary';
 import api         from '../../services/api';
 import LocBatchGrid from '../../components/LocBatchGrid';
 
-const STATIC_BASE = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api')
+const STATIC_BASE = (import.meta.env.VITE_API_BASE_URL || '/api')
   .replace(/\/api\/?$/, '');
 
 // ── Constants ─────────────────────────────────────────────────────────────────

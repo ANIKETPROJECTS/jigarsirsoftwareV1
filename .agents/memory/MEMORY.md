@@ -1,0 +1,1 @@
+- [Local MySQL compatibility](local-mysql-compatibility.md) — preserve the imported MySQL design; Windows-origin backups need case and view compatibility handling.

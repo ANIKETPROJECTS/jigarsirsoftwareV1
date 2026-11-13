@@ -7,6 +7,8 @@ const path    = require('path');
 const fs      = require('fs');
 
 const app = express();
+// Trust only the local Vite proxy, not arbitrary clients sending forwarded headers.
+app.set('trust proxy', 'loopback');
 
 // Security headers — CSP disabled so HTTP LAN access works.
 // (Helmet's default CSP includes upgrade-insecure-requests which breaks plain-HTTP deploys.)
@@ -77,7 +79,7 @@ app.use('/api/masters/parties',   require('./routes/masters/party'));
 app.use('/api/masters/items',     require('./routes/masters/item'));
 app.use('/api/masters/godowns',   require('./routes/masters/godown'));
 app.use('/api/masters/employees',         require('./routes/masters/employee'));
-app.use('/api/masters/ratechart',         require('./routes/masters/ratechart'));
+app.use('/api/masters/ratechart',         require('./routes/masters/rateChart'));
 app.use('/api/masters/party-godown-links', require('./routes/masters/partygodownlink'));
 app.use('/api/masters/locations',          require('./routes/masters/location'));
 app.use('/api/masters/docfiles',           require('./routes/masters/docFile'));

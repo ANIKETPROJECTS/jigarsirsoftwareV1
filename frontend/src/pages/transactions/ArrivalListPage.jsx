@@ -91,7 +91,7 @@ export default function ArrivalListPage() {
   const modalCameraRef  = useRef(null);
   const modalGalleryRef = useRef(null);
 
-  const STATIC_BASE = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api')
+  const STATIC_BASE = (import.meta.env.VITE_API_BASE_URL || '/api')
     .replace(/\/api\/?$/, '');
 
   // Load master data once

@@ -1229,7 +1229,7 @@ function TemplateSelectDialog({ open, onClose, onSelect }) {
 // ─────────────────────────────────────────────────────────────────────────────
 // MediaViewerDialog — shows photos / documents fetched from the backend
 // ─────────────────────────────────────────────────────────────────────────────
-const backendOrigin = (api.defaults.baseURL || 'http://localhost:3001/api').replace(/\/api\/?$/, '');
+const backendOrigin = (api.defaults.baseURL || '/api').replace(/\/api\/?$/, '');
 
 // DB stores FaYear as 4-char '2627'; upload folders use full '2026-2027'.
 function toFaYearFull(raw) {

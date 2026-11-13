@@ -28,7 +28,7 @@ import { useAuth }       from '../../contexts/AuthContext';
 
 // Full base URL of the Express server (strips /api suffix).
 // Needed because /uploads is served by Express, not the React dev server.
-const STATIC_BASE = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001/api')
+const STATIC_BASE = (import.meta.env.VITE_API_BASE_URL || '/api')
   .replace(/\/api\/?$/, '');
 
 // ── Date helpers ──────────────────────────────────────────────────────────────

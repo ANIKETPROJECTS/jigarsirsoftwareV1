@@ -39,7 +39,7 @@ import CloseIcon        from '@mui/icons-material/Close';
 import api from '../../services/api';
 import { encodeId } from '../../utils/idCodec';
 
-const STATIC_BASE = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api')
+const STATIC_BASE = (import.meta.env.VITE_API_BASE_URL || '/api')
   .replace(/\/api\/?$/, '');
 
 // ─── Utilities ────────────────────────────────────────────────────────────────

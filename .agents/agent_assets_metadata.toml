@@ -14,3 +14,17 @@ mtime_ms = 1794555952474
 storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:f55403e4-3ad5-457b-8d07-7c4081dca958/75e426b5-c7a7-4d8b-abad-23c12b2aa205/a5b1f991-247a-47e9-b23c-ed863fda1a5b"
 storage_version_token = "1794555966143503"
 content_type = "application/pdf"
+
+[[outputs]]
+id = "MgstPxKowve89fXy9ahcD"
+uri = "file://generated-artifacts/gms-sql-software-validation.pdf"
+type = "pdf"
+title = "Revised GMS SQL vs Software Module Comparison"
+description = "Updated as requested: only the Permission Master query is marked [Needs to be resolved or checked]; all other modules are marked matched per your confirmation."
+logical_id = "1c1d21db-bfd4-417f-b7f6-84f091a79ef1"
+content_hash = "sha256:c2b1c7b68f078eb391d6291cec2299978b1f8482cd9e52c10c85dcc0fe6b2558"
+size = 366707
+mtime_ms = 1794823113843
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:f55403e4-3ad5-457b-8d07-7c4081dca958/1c1d21db-bfd4-417f-b7f6-84f091a79ef1/7e1e68de-644c-4f8a-805b-732480ef773b"
+storage_version_token = "1794823127359593"
+content_type = "application/pdf"
